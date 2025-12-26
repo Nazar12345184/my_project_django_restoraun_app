@@ -19,6 +19,49 @@ def menu(request):
 def register(request):
     return render(request, 'register.html')
 
+def breakfest(request):
+    return render(request, 'breakfest.html')
+
+def salat(request):
+    return render(request, 'salat.html')
+
+def sup(request):
+    return render(request, 'sup.html')
+
+def drink(request):
+    return render(request, 'drink.html')
+
+def desert(request):
+    return render(request, 'desert.html')
+
+def ohibka(request):
+    return render(request, 'ohibka.html')
+
+def sirniku(request):
+    return render(request, 'sirniku.html')
+
+def tostu(request):
+    return render(request, 'tostu.html')
+
+def vafli(request):
+    return render(request, 'vafli.html')
+
+def voda(request):
+    return render(request, 'voda.html')
+
+def tea(request):
+    return render(request, 'tea.html')
+
+def smyzi(request):
+    return render(request, 'smyzi.html')
+
+def kok(request):
+    return render(request, 'kok.html')
+
+def kava(request):
+    return render(request, 'kava.html')
+
+
 
 def start_page(request):
     if request.user.is_authenticated:
