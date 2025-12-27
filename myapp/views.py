@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+﻿from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -20,54 +20,191 @@ def register(request):
     return render(request, 'register.html')
 
 def breakfest(request):
-    return render(request, 'breakfest.html')
+    return render(request, 'breakfest/breakfest.html')
 
 def salat(request):
-    return render(request, 'salat.html')
+    return render(request, 'salat/salat.html')
 
 def sup(request):
-    return render(request, 'sup.html')
+    return render(request, 'sup/sup.html')
 
 def drink(request):
-    return render(request, 'drink.html')
+    return render(request, 'drink/drink.html')
 
 def desert(request):
-    return render(request, 'desert.html')
+    return render(request, 'desert/desert.html')
 
 def ohibka(request):
     return render(request, 'ohibka.html')
 
 def sirniku(request):
-    return render(request, 'sirniku.html')
+    return render(request, 'breakfest/sirniku/sirniku.html')
 
 def tostu(request):
-    return render(request, 'tostu.html')
+    return render(request, 'breakfest/tostu/tostu.html')
 
 def vafli(request):
-    return render(request, 'vafli.html')
+    return render(request, 'breakfest/vafli/vafli.html')
 
 def voda(request):
-    return render(request, 'voda.html')
+    return render(request, 'drink/voda/voda.html')
 
 def tea(request):
-    return render(request, 'tea.html')
+    return render(request, 'drink/tea/tea.html')
 
 def smyzi(request):
-    return render(request, 'smyzi.html')
+    return render(request, 'drink/smyzi/smyzi.html')
 
 def kok(request):
-    return render(request, 'kok.html')
+    return render(request, 'drink/kok/kok.html')
 
 def kava(request):
-    return render(request, 'kava.html')
+    return render(request, 'drink/kava/kava.html')
+
+def espresso(request):
+    return render(request, 'drink/kava/espresso.html')
+
+def americano(request):
+    return render(request, 'drink/kava/americano.html')
+
+def kapuchino(request):
+    return render(request, 'drink/kava/kapuchino.html')
+
+def latte(request):
+    return render(request, 'drink/kava/latte.html')
+
+def kakao(request):
+    return render(request, 'drink/kava/kakao.html')
+
+def mol(request):
+    return render(request, 'drink/kok/mol.html')
+
+def blla(request):
+    return render(request, 'drink/kok/blla.html')
+
+def mohito(request):
+    return render(request, 'drink/kok/mohito.html')
+
+def cherry(request):
+    return render(request, 'drink/smyzi/cherry.html')
+
+def polynisa(request):
+    return render(request, 'drink/smyzi/polynisa.html')
+
+def banan(request):
+    return render(request, 'drink/smyzi/banan.html')
+
+def green(request):
+    return render(request, 'drink/tea/green.html')
+
+def black(request):
+    return render(request, 'drink/tea/black.html')
+
+def night(request):
+    return render(request, 'drink/tea/1001night.html')
+
+def sik(request):
+    return render(request, 'drink/voda/sik.html')
+
+def sprite(request):
+    return render(request, 'drink/voda/sprite.html')
+
+def kola(request):
+    return render(request, 'drink/voda/kola.html')
+
+def yzvar(request):
+    return render(request, 'drink/voda/yzvar.html')
+
+def grech(request):
+    return render(request, 'salat/grech/gresh.html')
+
+def krevetka(request):
+    return render(request, 'salat/krevetka/krevetka.html')
+
+# --- breakfest  ---
+def sirniku_mal(request):
+    return render(request, 'breakfest/sirniku/mal.html')
+
+def sirniku_shok(request):
+    return render(request, 'breakfest/sirniku/shok.html')
+
+def sirniku_sol(request):
+    return render(request, 'breakfest/sirniku/sol.html')
+
+# ---     tostu      ---
+def tostu_avo(request):
+    return render(request, 'breakfest/tostu/avo.html')
+
+def tostu_chdj(request):
+    return render(request, 'breakfest/tostu/chdj.html')
+
+def tostu_maldj(request):
+    return render(request, 'breakfest/tostu/maldj.html')
+
+def tostu_poldj(request):
+    return render(request, 'breakfest/tostu/poldj.html')
+
+def tostu_sur(request):
+    return render(request, 'breakfest/tostu/sur.html')
+
+# --- vafli  ---
+def vafli_maldjm(request):
+    return render(request, 'breakfest/vafli/maldjm.html')
+
+def vafli_med(request):
+    return render(request, 'breakfest/vafli/med.html')
+
+def vafli_poldjm(request):
+    return render(request, 'breakfest/vafli/poldjm.html')
+
+def vafli_sirop(request):
+    return render(request, 'breakfest/vafli/sirop.html')
+
+# ---    salat    ---
+def ol(request):
+    return render(request, 'salat/ol/ol.html')
+
+def shezar(request):
+    return render(request, 'salat/shezar/shezar.html')
+
+def zavok(request):
+    return render(request, 'salat/zavok/zavok.html')
 
 
+# ---  start page ----
 
 def start_page(request):
     if request.user.is_authenticated:
         return redirect('menu')
     else:
         return redirect('main')  
+
+# --- desert  ---
+def moroz(request):
+    return render(request, 'desert/moroz/moroz.html')
+
+def nap(request):
+    return render(request, 'desert/nap/nap.html')
+
+def tir(request):
+    return render(request, 'desert/tir/tir.html')
+
+# --- sup  ---
+def frik(request):
+    return render(request, 'sup/frik/frik.html')
+
+def bul(request):
+    return render(request, 'sup/bul/bul.html')
+
+def borch(request):
+    return render(request, 'sup/borch/borch.html')
+
+def zelborch(request):
+    return render(request, 'sup/zelborch/zelborch.html')
+
+# --- salat  ---
+def avokado(request):
+    return render(request, 'salat/avokado/avokado.html')
 
 
 #           LOGIN
@@ -93,7 +230,7 @@ class LoginView(FormView):
 class RegisterView(CreateView):
     template_name = 'register.html'
     form_class = UserCreationForm
-    success_url = reverse_lazy('login')  # після реєстрації → логін
+    success_url = reverse_lazy('login')  # після реєстрації — логін
 
 
 #                 HOME
@@ -102,4 +239,4 @@ class HomeView(LoginRequiredMixin, ListView):
     template_name = 'main.html'
     model = menuu
     context_object_name = 'all_items'
-    # model = Item  # розкоментуйте після створення моделі
+    

@@ -1,12 +1,13 @@
-{% load static %}
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        * {
+
+<style>
+
+ * {
             margin: 0;
             padding: 0;
         }
@@ -48,25 +49,18 @@
             outline: none;
         }
 
-        .buttons {
-            display: flex;
-            flex-direction: column; 
-            gap: 15px;             
-            z-index: 10;
-}
+</style>
 
-    </style>
-</head>
 <body>
-        {% include 'includes/decor_css.html' %}
+    {% include 'includes/decor_css.html' %}
+    <h1>Чай</h1>
     <div class="buttons">
-        <button onclick="window.location.href='/menu/'">перейти до меню в режимі гостя</button>
-        <button onclick="window.location.href='/register/'">перейти до реєстрації</button>
-        <button onclick="window.location.href='/login/'">перейти до логіну</button>
+        <button onclick="window.location.href='/green/'">Зелений</button>
+        <button onclick="window.location.href='/black/'">Чорний</button>
+        <button onclick="window.location.href='/1001night/'">1001night</button>
     </div>
-        <h1>Головна</h1>
-    <img src="{% static 'images/mt.png' %}">
+
+    {% include 'includes/back_button.html' %}
 
 </body>
-
 </html>

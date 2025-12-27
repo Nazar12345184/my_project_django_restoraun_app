@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-
+    {% include 'includes/decor_css.html' %}
     <style>
-
          * {
             margin: 0;
             padding: 0;
+
         }
         body {
             width: 100%;
@@ -59,18 +58,20 @@
 
 
     </style>
+</head>
 
 <body>
-    
-
-
-    <div class="buttons">
-        <button onclick="window.location.href='/breakfest/'">сніданки</button>
-        <button onclick="window.location.href='/sup/'">супи</button>
-        <button onclick="window.location.href='/salat/'">салати</button>
-        <button onclick="window.location.href='/drink/'">напої</button>
-        <button onclick="window.location.href='/desert/'">десерти</button>
+    <div class="card">
+        <h1>Меню</h1>
+        <div class="buttons">
+            <button onclick="window.location.href='/breakfest/'">сніданки</button>
+            <button onclick="window.location.href='/sup/'">супи</button>
+            <button onclick="window.location.href='/salat/'">салати</button>
+            <button onclick="window.location.href='/drink/'">напої</button>
+            <button onclick="window.location.href='/desert/'">десерти</button>
+        </div>
     </div>
+
 
 </body>
 </html>

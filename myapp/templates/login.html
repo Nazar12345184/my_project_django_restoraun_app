@@ -1,5 +1,5 @@
 <!-- templates/accounts/login.html -->
-<h2>Вхід</h2>
+<h1>Вхід</h1>
 <form method="POST">
     {% csrf_token %}
     {{ form.as_p }}
@@ -9,3 +9,4 @@
     <p style="color:red;">{{ error }}</p>
 {% endif %}
 <a href = "{% url 'register' %}">Register</a>
+{% include 'includes/back_button.html' %}

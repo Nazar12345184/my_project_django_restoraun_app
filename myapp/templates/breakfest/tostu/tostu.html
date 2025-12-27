@@ -1,12 +1,13 @@
-{% load static %}
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        * {
+</head>
+
+        <style>
+         * {
             margin: 0;
             padding: 0;
         }
@@ -47,26 +48,26 @@
         button:focus {
             outline: none;
         }
-
         .buttons {
             display: flex;
             flex-direction: column; 
             gap: 15px;             
             z-index: 10;
-}
+        }
 
-    </style>
-</head>
+        </style>
+
 <body>
-        {% include 'includes/decor_css.html' %}
+    <h1>Тості</h1>
     <div class="buttons">
-        <button onclick="window.location.href='/menu/'">перейти до меню в режимі гостя</button>
-        <button onclick="window.location.href='/register/'">перейти до реєстрації</button>
-        <button onclick="window.location.href='/login/'">перейти до логіну</button>
+        <button onclick="window.location.href='/tostu/avo/'">Авокадо</button>
+        <button onclick="window.location.href='/tostu/sur/'">Сир</button>
+        <button onclick="window.location.href='/tostu/maldj/'">Малина з джемом</button>
+        <button onclick="window.location.href='/tostu/poldj/'">Полуниця з джемом</button>
+        <button onclick="window.location.href='/tostu/chdj/'">Чорниця з джемом</button>
     </div>
-        <h1>Головна</h1>
-    <img src="{% static 'images/mt.png' %}">
+    
+    {% include 'includes/back_button.html' %}
 
 </body>
-
 </html>
