@@ -1,1 +1,22 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% include 'includes/decor_css.html' %}
+
+    <a href="{% url 'blackcom' %}">Додавить комент</a>
+
+    {% for com in comm %}
+        <div class="post-item">
+            <p>{{ com.description }}</p>
+        </div>
+        {% endfor %}
+
+    {% include 'includes/back_button.html' %}
+    </body>
+    </html>

@@ -9,6 +9,17 @@
     {% include 'includes/decor_css.html' %}
     <h1>Американо</h1>
     <p>Інформація про Американо.</p>
+    <a href="{% url 'americanocom' %}">Добавить комент</a>
+
+    <div class="posts-section">
+            <h3>коменти</h3>
+
+                {% for com in comm %}
+                <div class="post-item">
+                    <p>{{ com.description }}</p>
+                </div>
+                {% endfor %}
+
     {% include 'includes/back_button.html' %}
 </body>
 </html>

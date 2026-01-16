@@ -8,6 +8,13 @@
 <body>
     <h1>Сік</h1>
     <p>Інформація про соки.</p>
+    <a href="{% url 'sikcom' %}">Додати коментар</a>
+
+    {% for com in comm %}
+        <div class="post-item">
+            <p>{{ com.description }}</p>
+        </div>
+        {% endfor %}
     {% include 'includes/back_button.html' %}
 </body>
 </html>

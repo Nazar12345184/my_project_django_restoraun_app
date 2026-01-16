@@ -10,6 +10,14 @@
 <body>
 	<h1>Узвар</h1>
 	<p>Інформація про узвар.</p>
+	<a href="{% url 'yzvarcom' %}">Додати коментар</a>
+
+	{% for com in comm %}
+        <div class="post-item">
+            <p>{{ com.description }}</p>
+        </div>
+        {% endfor %}
+
     {% include 'includes/back_button.html' %}
 </body>
 </html>
