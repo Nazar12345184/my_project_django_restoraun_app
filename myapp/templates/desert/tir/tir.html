@@ -9,7 +9,13 @@
 <body>
     <div class="card">
         <h1>Тірамісу</h1>
-        <p>Інформація про морозиво.</p>
+        <p>Інформація про тірамісу.</p>
+        <a href="{% url 'tircom' %}">Додати комент</a>
+        {% for com in comm %}
+        <div class="post-item">
+            <p>{{ com.description }}</p>
+        </div>
+        {% endfor %}
     </div>
     {% include 'includes/back_button.html' %}
 </body>

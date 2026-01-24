@@ -10,7 +10,12 @@
     <div class="card">
         <h1>Торт «Наполеон»</h1>
         <p>Опис торту Наполеон.</p>
-        <p>Опис торту Наполеон.</p>
+        <a href="{% url 'napcom' %}">Додати комент</a>
+        {% for com in comm %}
+        <div class="post-item">
+            <p>{{ com.description }}</p>
+        </div>
+        {% endfor %}
     </div>
     {% include 'includes/back_button.html' %}
 </body>

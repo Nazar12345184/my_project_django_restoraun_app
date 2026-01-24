@@ -10,7 +10,14 @@
     <div class="card">
         <h1>Морозиво</h1>
         <p>Інформація про морозиво.</p>
+        <a href="{% url 'morozcom' %}">Додати комент</a>
+        {% for com in comm %}
+        <div class="post-item">
+            <p>{{ com.description }}</p>
+        </div>
+        {% endfor %}
     </div>
+    
     {% include 'includes/back_button.html' %}
 </body>
 </html>

@@ -269,6 +269,8 @@ def lattecom(request):
 
     return render(request, 'drink/kava/lattecom.html', {"form": form, "item": item})
 
+
+
 def comp(request):
     comm = com.objects.all()
     return render(request, 'drink/kava/latte.html', context={'comm': comm})
@@ -622,18 +624,78 @@ def krevetka(request):
 def desert(request):
     return render(request, 'desert/desert.html')
 
-
+###############################
 def moroz(request):
-    return render(request, 'desert/moroz/moroz.html')
+    comm = com.objects.filter(name__name='moroz')
+    return render(request, 'desert/moroz/moroz.html', context={'comm': comm})
+
+def morozcom(request):
+    item = get_object_or_404(menuu, name='moroz')
+    if request.method == "POST":
+        form = PostForm(request.POST)
+        if form.is_valid():
+            new_comment = form.save(commit=False)
+            new_comment.name = item
+            new_comment.save()
+            return redirect("moroz")
+    else:
+        form = PostForm()
+
+    return render(request, 'desert/moroz/morozcom.html', {"form": form, "item": item})
+
+
+def comp(request):
+    comm = com.objects.all()
+    return render(request, 'desert/moroz/moroz.html', context={'comm': comm})
+
+#################################
 
 
 def nap(request):
-    return render(request, 'desert/nap/nap.html')
+    comm = com.objects.filter(name__name='nap')
+    return render(request, 'desert/nap/nap.html', context={'comm': comm})
 
+def napcom(request):
+    item = get_object_or_404(menuu, name='nap')
+    if request.method == "POST":
+        form = PostForm(request.POST)
+        if form.is_valid():
+            new_comment = form.save(commit=False)
+            new_comment.name = item
+            new_comment.save()
+            return redirect("nap")
+    else:
+        form = PostForm()
+
+    return render(request, 'desert/nap/napcom.html', {"form": form, "item": item})
+
+def comp(request):
+    comm = com.objects.all()
+    return render(request, 'desert/nap/nap.html', context={'comm': comm})
+
+##################################
 
 def tir(request):
-    return render(request, 'desert/tir/tir.html')
+    comm = com.objects.filter(name__name='tir')
+    return render(request, 'desert/tir/tir.html', context={'comm': comm})
 
+def tircom(request):
+    item = get_object_or_404(menuu, name='tir')
+    if request.method == "POST":
+        form = PostForm(request.POST)
+        if form.is_valid():
+            new_comment = form.save(commit=False)
+            new_comment.name = item
+            new_comment.save()
+            return redirect("tir")
+    else:
+        form = PostForm()
+
+    return render(request, 'desert/tir/tircom.html', {"form": form, "item": item})
+
+def comp(request):
+    comm = com.objects.all()
+    return render(request, 'desert/tir/tir.html', context={'comm': comm})
 
 # ---------------- AUTH ----------------
 
